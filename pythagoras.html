@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Charmaines Web Page</title>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input[type="number"] {
+                width: 200px;
+                padding: 5px;
+            }
+
+            button {
+                padding: 5px 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            #result {
+                margin-top: 20px;
+                font-weight: bold;
+                color: #333;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>JavaScript Math Class</h1>
+
+        <label for="sideA">Side A:</label>
+        <input type="number" id="sideA" /><br />
+
+        <label for="sideB">Side B:</label>
+        <input type="number" id="sideB" /><br />
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+
+        <script type="text/javascript">
+                function calculate() {
+                // Get the values of side A and side B from the input fields
+                var sideA = parseInt(document.getElementById('sideA').value);
+                var sideB = parseInt(document.getElementById('sideB').value);
+
+                // Apply the Pythagorean Theorem formula to calculate side C (hypotenuse)
+                var sideC = Math.sqrt((sideA * sideA) + (sideB * sideB));
+
+                    // Display the result
+              document.getElementById('result').innerHTML = "Side C (hypotenuse) = " + sideC;
+            }
+        </script>
+    </body>
+</html>
